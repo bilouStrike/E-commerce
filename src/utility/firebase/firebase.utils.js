@@ -12,6 +12,30 @@ const firebaseConfig = {
     appId: "1:616394675615:web:a23720229241c453bf19aa"
 };
 
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) return;
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+    const snapshot =  await userRef.get();
+    if (!snapshot.exists) {
+        const { displayName, email } = userAuth;
+        const createAt = new Date();
+
+        try {
+            userRef.set({
+                displayName,
+                email,
+                createAt,
+                ...additionalData
+            })
+        } catch (error) {
+            console.log('Failed to add sve user',  error.message)
+        }
+    }
+    console.log(snapshot);
+    return userRef;
+}
+
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
