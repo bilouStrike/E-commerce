@@ -10,6 +10,7 @@ import SignInSignUp from './pages/signIn-signup-page/signIn-signUp.component';
 import Header from './components/header/header.component';
 import { auth, createUserProfileDocument } from './utility/firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 class App extends React.Component {
 
@@ -54,8 +55,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = ( state ) => ({
+  currentUser: selectCurrentUser(state)
 })
 
 const mapDispatchToProps = dispatch => ({
