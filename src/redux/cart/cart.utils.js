@@ -1,14 +1,12 @@
 const addItemToCart = ( cartItems, cartItemToAdd ) => {
 
-    console.log(cartItems);
-    const isExist = cartItems.find( item => item.id == cartItemToAdd.id );
+    const isExist = cartItems.find( item => item.id === cartItemToAdd.id );
 
     if( isExist ) {
        return cartItems.map( item =>  
             item.id === cartItemToAdd.id ? 
-            { ...item, qunatity: item.qunatity + 1  } : item )
+            { ...item, quantity: item.quantity + 1  } : item )
     } 
-
-    return [ ...cartItems, {...cartItemToAdd, qunatity:1 } ]
+    return [ ...cartItems, {...cartItemToAdd, quantity:1 } ]
 }
 export default addItemToCart;
