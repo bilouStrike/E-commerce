@@ -32,6 +32,7 @@ const CheckoutPage = ( {cartItems, total} ) => (
   </div>
 );
 
+
 const mapStateToProps = ( state ) => ({
    cartItems: selectCartItems(state),
    total: selectCartTotal(state)

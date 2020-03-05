@@ -1,4 +1,6 @@
-const addItemToCart = ( cartItems, cartItemToAdd ) => {
+import CartItem from "../../components/cart-item/cart-item.component";
+
+export const addItemToCart = ( cartItems, cartItemToAdd ) => {
 
     const isExist = cartItems.find( item => item.id === cartItemToAdd.id );
 
@@ -9,4 +11,8 @@ const addItemToCart = ( cartItems, cartItemToAdd ) => {
     } 
     return [ ...cartItems, {...cartItemToAdd, quantity:1 } ]
 }
-export default addItemToCart;
+
+export const removeItemFromCart = ( cartItems, cartItemToRemove ) => {
+    
+    return cartItems.filter( item => item.id != cartItemToRemove.id  )
+}
