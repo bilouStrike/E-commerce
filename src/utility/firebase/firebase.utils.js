@@ -32,9 +32,21 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             console.log('Failed to add sve user',  error.message)
         }
     }
-    console.log(snapshot);
+    //console.log(snapshot);
     return userRef;
 }
+
+/*export const addCollectionAndItems = async (collectionKey, objectToAdd) => {
+    const collectionRef = firestore.collection(collectionKey);
+    
+    const batch = firestore.batch();
+
+    objectToAdd.forEach( obj => {
+        const newDocRef = collectionRef.doc();
+        batch.set(newDocRef, obj )
+    })
+    return await batch.commit();
+}*/
 
 firebase.initializeApp(firebaseConfig);
 
