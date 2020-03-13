@@ -1,3 +1,11 @@
-export const userActionsTypes = {
-    SET_CURRENT_USER: 'SET_CURRENT_USER'
-} 
+const userActionsTypes = {
+    SET_CURRENT_USER: 'SET_CURRENT_USER',
+    GOOGLE_SIGN_IN_START: 'GOOGLE_SIGN_IN_START',
+    EMAIL_SIGN_IN_START: 'EMAIL_SIGN_IN_START',
+    SIGN_IN_SUCCESS: 'SIGN_IN_SUCCESS',
+    SIGN_IN_FAILUR: 'SIGN_IN_FAILUR',
+    SIGN_OUT_START: 'SIGN_OUT_START',
+}
+export default userActionsTypes;
+
+
