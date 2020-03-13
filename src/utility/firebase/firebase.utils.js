@@ -32,7 +32,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             console.log('Failed to add sve user',  error.message)
         }
     }
-    //console.log(snapshot);
     return userRef;
 }
 
@@ -47,6 +46,7 @@ export const addCollectionAndItems = async (collectionKey, objectToAdd) => {
     })
     return await batch.commit();
 }
+
 export const converCollectionsSnapshotToMap = (collections) => {
     const transformedCollection = collections.docs.map( doc => {
         const { title, items } = doc.data();
@@ -66,6 +66,15 @@ export const converCollectionsSnapshotToMap = (collections) => {
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
+export const getCurrentUser = () => {
+    return new Promise( (resolve, reject) => {
+        const unsubscribe = auth.onAuthStateChanged(userAuth => { 
+            unsubscribe();
+            resolve(userAuth);
+        }, reject )}
+    );
+}
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });

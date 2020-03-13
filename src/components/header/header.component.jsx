@@ -11,7 +11,7 @@ import { signOutStart } from '../../redux/user/user.actions';
 
 import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink  } from './header.styles';
 
-const Header = ( {currentUser, hidden} ) => {
+const Header = ( {currentUser, hidden, signOutStart} ) => {
   console.log(currentUser);
   return(
   <HeaderContainer>
@@ -27,7 +27,7 @@ const Header = ( {currentUser, hidden} ) => {
       </OptionLink>
       { 
         currentUser ?
-        <OptionLink as='div' onClick={signOutStart}> SIGN OUT </OptionLink>
+        <OptionLink as='a' onClick={signOutStart}> SIGN OUT </OptionLink>
         :
         <OptionLink to='/signin'> SIGN IN </OptionLink>
       }
