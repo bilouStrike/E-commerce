@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect to render sign in and sign up page 1`] = `
+<div
+  className="sign-in-and-sign-up"
+>
+  <Connect(SignIn) />
+  <Connect(SignUp) />
+</div>
+`;

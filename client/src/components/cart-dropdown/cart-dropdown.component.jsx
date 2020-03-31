@@ -9,27 +9,29 @@ import { withRouter } from 'react-router-dom';
 
 import './cart-dropdown.styles.scss';
 
-const CartDropdown = ( {cartItems, history, dispatch} ) => (
-  <div className='cart-dropdown'>
-    <div className='cart-items' >
-      { cartItems.length ?
-        cartItems.map( item =>  
-          <CartItem key={item.id} item={item}/>
-        )
-        :
-        (<span> Your cart is empty </span>)
-      }
-      </div>
-      <CustomButton onClick={ () => {
-          history.push('/checkout');
-          dispatch(toogleCartHidden())
-        }
-      }> GO TO CHECKOUT</CustomButton>
+const CartDropdown = ({ cartItems, history, dispatch }) => (
+  <div className="cart-dropdown">
+    <div className="cart-items">
+      {cartItems.length ? (
+        cartItems.map((item) => <CartItem key={item.id} item={item} />)
+      ) : (
+        <span> Your cart is empty </span>
+      )}
+    </div>
+    <CustomButton
+      onClick={() => {
+        history.push('/checkout');
+        dispatch(toogleCartHidden());
+      }}
+    >
+      {' '}
+      GO TO CHECKOUT
+    </CustomButton>
   </div>
 );
 
-const mapStatetoPorps = ( state ) => ({
-  cartItems: selectCartItems(state)
-})
- 
+const mapStatetoPorps = (state) => ({
+  cartItems: selectCartItems(state),
+});
+
 export default withRouter(connect(mapStatetoPorps)(CartDropdown));

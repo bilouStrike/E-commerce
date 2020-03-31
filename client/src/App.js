@@ -3,18 +3,15 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './App.css';
-
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-
 import SignInSignUp from './pages/signIn-signup-page/signIn-signUp.component';
 import Header from './components/header/header.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-
-export const App = ({checkUserSession, currentUser}) => {
+export const App = ({ checkUserSession, currentUser }) => {
 
     useEffect(()=> {
       checkUserSession()
@@ -31,14 +28,14 @@ export const App = ({checkUserSession, currentUser}) => {
         </Switch>
       </div>
     );
-}
+};
 
 const mapStateToProps = ( state ) => ({
   currentUser: selectCurrentUser(state)
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   checkUserSession: () => dispatch(checkUserSession())
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

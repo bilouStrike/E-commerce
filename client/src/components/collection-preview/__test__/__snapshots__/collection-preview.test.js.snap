@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render cart item component 1`] = `
+<div
+  className="collection-preview"
+>
+  <h1
+    className="title"
+  >
+    HATS
+  </h1>
+  <div
+    className="preview"
+  >
+    <Connect(CollectionItem)
+      item={
+        Object {
+          "imageUrl": "url",
+          "name": "name1",
+          "price": "250",
+          "quantity": 2,
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render hpme page 1`] = `
+<styled.div>
+  <h3>
+    Welcome to my Homepage
+  </h3>
+  <Connect(Directory) />
+</styled.div>
+`;
