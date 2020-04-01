@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render checkout component 1`] = `
+<div
+  className="checkout-page"
+>
+  <div
+    className="checkout-header"
+  >
+    <div
+      className="header-block"
+    >
+      <span>
+        Product
+      </span>
+    </div>
+    <div
+      className="header-block"
+    >
+      <span>
+        Description
+      </span>
+    </div>
+    <div
+      className="header-block"
+    >
+      <span>
+        Quantity
+      </span>
+    </div>
+    <div
+      className="header-block"
+    >
+      <span>
+        Price
+      </span>
+    </div>
+    <div
+      className="header-block"
+    >
+      <span>
+        Remove
+      </span>
+    </div>
+  </div>
+  <Connect(CheckoutItem)
+    cartItem={
+      Object {
+        "imageUrl": "url",
+        "name": "name1",
+        "price": "250",
+        "quantity": 2,
+      }
+    }
+  />
+  <div
+    className="total"
+  >
+    TOTAL: $
+    500
+  </div>
+  <StripeCheckoutButton
+    price={500}
+  />
+</div>
+`;

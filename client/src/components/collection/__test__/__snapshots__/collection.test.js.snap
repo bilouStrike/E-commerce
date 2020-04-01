@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`expect to render cart item component 1`] = `
+exports[`Should render Collection component 1`] = `
 <div
-  className="collection-preview"
+  className="collection-page"
 >
-  <h1
+  <h2
     className="title"
   >
-    HATS
-  </h1>
+    hats
+  </h2>
   <div
-    className="preview"
+    className="items"
   >
     <Connect(CollectionItem)
       item={

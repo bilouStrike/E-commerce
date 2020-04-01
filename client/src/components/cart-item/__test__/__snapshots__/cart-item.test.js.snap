@@ -6,17 +6,22 @@ exports[`expect to render cart item component 1`] = `
 >
   <img
     alt="item"
+    src="image url"
   />
   <div
     className="item-details"
   >
     <span
       className="name"
-    />
+    >
+      hats
+    </span>
     <span
       className="price"
     >
+      20
        x $
+      250
     </span>
   </div>
 </div>

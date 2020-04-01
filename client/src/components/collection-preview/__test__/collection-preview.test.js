@@ -6,6 +6,7 @@ import CollectionPreview from '../collection-preview.component';
 it('expect to render cart item component', () => {
     const mockTile = 'hats';
     const mockItems = [{
+            id:2,
             imageUrl: 'url',
             price: '250',
             name: 'name1',
