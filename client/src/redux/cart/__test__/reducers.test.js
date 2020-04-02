@@ -110,6 +110,4 @@ describe('Card reducer', ()=> {
                 cartItems: []
             });
     });
-
-
 });

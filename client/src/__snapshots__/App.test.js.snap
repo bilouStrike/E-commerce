@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Should render App component 1`] = `
+<div
+  className="app-container"
+>
+  <Connect(Header) />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ShopPage)",
+          "type": [Function],
+        }
+      }
+      path="/shop"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(CheckoutPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/checkout"
+    />
+    <Route
+      exact={true}
+      path="/signin"
+      render={[Function]}
+    />
+  </Switch>
+</div>
+`;

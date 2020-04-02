@@ -20,7 +20,7 @@ describe("Shpe page", () => {
                 path: "",
                 url: ""
             },
-            fetchCollectionStart: jest.fn(),
+            fetchCollectionsStart: jest.fn(),
         };
         wrapper = toJson(shallow(<ShopPage {...props} />));
     });
