@@ -4,15 +4,16 @@ import { ShopPage } from '../shop.component';
 import toJson from 'enzyme-to-json';
 
 describe("Shpe page", () => {
-    const useEffect = jest.spyOn(React, "useEffect");
+ 
+    let wrapper;
+    let props;
+    let useEffect;
+
     const mockUseEffect = () => {
         useEffect.mockImplementationOnce(f => f());
     };
-    let wrapper;
-    let props;
-    beforeEach( () => {  
-        mockUseEffect();
-        mockUseEffect();
+    beforeEach( () => { 
+        useEffect = jest.spyOn(React, "useEffect").mockImplementation(f => f());
         props = {
             match : { 
                 params: {id: 1},
@@ -20,8 +21,10 @@ describe("Shpe page", () => {
                 path: "",
                 url: ""
             },
-            fetchCollectionsStart: jest.fn(),
+            fetchCollectionsStart: jest.fn().mockResolvedValue({ type: 'FETCH_COLLECTIONS_START'}),
         };
+        mockUseEffect();
+        mockUseEffect();
         wrapper = toJson(shallow(<ShopPage {...props} />));
     });
 
@@ -31,8 +34,7 @@ describe("Shpe page", () => {
         });
     });
 
-    /*it('expect to call callback on shallow shop page component', () => {
-        //const fetchCollectionStart = jest.fn();
-        expect(props.fetchCollectionStart).toHaveBeenCalled();
-    });*/
+    it('expect to call callback on shallow shop page component', () => {
+        expect(props.fetchCollectionsStart).toHaveBeenCalled();
+    });
 });

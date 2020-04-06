@@ -18,6 +18,7 @@ describe('SAGA: onSignOutSuccess', () => {
 
 describe('SAGA: cleanCartOnSignOut', () => {
     const genObject = cleanCartOnSignOut();
+    
     it('Should put action', () => {
         expect(genObject.next().value).toEqual(put(clearCart()));
     });

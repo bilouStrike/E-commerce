@@ -8,7 +8,7 @@ import collectionsContainer from '../../components/collection/collection.contain
 import { fetchCollectionsStart } from './../../redux/shop/shop.actions';
 
 export const ShopPage = ({ match, fetchCollectionsStart }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     fetchCollectionsStart();
   }, [fetchCollectionsStart]);
 

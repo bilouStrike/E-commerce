@@ -29,7 +29,6 @@ export function* signInWithGoogle() {
 }
 
 export function* signInWithEmail({payload}) {
-
     const { email, password } = payload;
     try {
         const { user } = yield auth.signInWithEmailAndPassword(email, password);
