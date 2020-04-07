@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout component: expect checkout component to do onot changing 1`] = `
+<div
+  className="checkout-item"
+>
+  <div
+    className="image-container"
+  >
+    <img
+      alt="item"
+      src="image url"
+    />
+  </div>
+  <span
+    className="name"
+  >
+    Product1
+  </span>
+  <span
+    className="quantity"
+  >
+    1
+  </span>
+  <span
+    className="price"
+  >
+    50
+  </span>
+  <div
+    className="remove-button"
+    id="removeItem"
+    onClick={[Function]}
+  >
+    ✕
+  </div>
+</div>
+`;
