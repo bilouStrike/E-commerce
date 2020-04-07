@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput compoent Should render FormInput with label 1`] = `
+<div
+  className="group"
+>
+  <input
+    className="form-input"
+    name="email"
+    onChange={[MockFunction]}
+    required={true}
+    type="text"
+    value="value"
+  />
+  <label
+    className="shrink form-input-label"
+  >
+    email
+  </label>
+</div>
+`;
+
+exports[`FormInput compoent Should render FormInput with label and without shink class 1`] = `
+<div
+  className="group"
+>
+  <input
+    className="form-input"
+    name="email"
+    onChange={[MockFunction]}
+    required={true}
+    type="text"
+    value={0}
+  />
+  <label
+    className=" form-input-label"
+  >
+    email
+  </label>
+</div>
+`;
+
+exports[`FormInput compoent Should render FormInput without label 1`] = `
+<div
+  className="group"
+>
+  <input
+    className="form-input"
+    name="email"
+    onChange={[MockFunction]}
+    required={true}
+    type="text"
+    value="value"
+  />
+  <label
+    className="shrink form-input-label"
+  >
+    email
+  </label>
+</div>
+`;
