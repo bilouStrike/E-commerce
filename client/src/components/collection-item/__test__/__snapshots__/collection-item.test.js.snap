@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collection Item Expect to render CollectionItem component 1`] = `
+<div
+  className="collection-item"
+>
+  <div
+    className="image"
+    style={
+      Object {
+        "backgroundImage": "url(image url)",
+      }
+    }
+  />
+  <div
+    className="collection-footer"
+  >
+    <span
+      className="name"
+    >
+      item
+    </span>
+    <span
+      className="price"
+    >
+      50
+    </span>
+  </div>
+  <CustomButton
+    inverted={true}
+    onClick={[Function]}
+  >
+     
+    Add to cart
+     
+  </CustomButton>
+</div>
+`;
