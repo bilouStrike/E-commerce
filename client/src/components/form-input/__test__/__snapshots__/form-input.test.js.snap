@@ -13,7 +13,7 @@ exports[`FormInput compoent Should render FormInput with label 1`] = `
     value="value"
   />
   <label
-    className="shrink form-input-label"
+    className="shrink  form-input-label"
   >
     email
   </label>
@@ -33,7 +33,7 @@ exports[`FormInput compoent Should render FormInput with label and without shink
     value={0}
   />
   <label
-    className=" form-input-label"
+    className="  form-input-label"
   >
     email
   </label>
@@ -53,7 +53,7 @@ exports[`FormInput compoent Should render FormInput without label 1`] = `
     value="value"
   />
   <label
-    className="shrink form-input-label"
+    className="shrink  form-input-label"
   >
     email
   </label>
