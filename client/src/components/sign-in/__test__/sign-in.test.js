@@ -5,18 +5,16 @@ import { SignIn } from '../sign-in.component';
 
 describe('Sign In component', () => {
 
+    let wrapper;
     const mockemailSignInStart = jest.fn();
     const mockgoogleSignInStart = jest.fn();
-    const mockHandleSubmit = jest.fn();
 
-    mockHandleSubmit.mockImplementation( async () => {
-        mockemailSignInStart('email@email.com', 'password');
+    beforeEach(() => {
+          wrapper = shallow(<SignIn 
+            emailSignInStart={mockemailSignInStart} 
+            googleSignInStart={mockgoogleSignInStart}/>
+        );
     });
-
-    let wrapper = shallow(<SignIn 
-        emailSignInStart={mockemailSignInStart} 
-        googleSignInStart={mockgoogleSignInStart}/>
-    );
 
     it('expect to render signIn component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -52,5 +50,10 @@ describe('Sign In component', () => {
             children: 'Sign in with Google'
         });
     });
-    
+
+    it('expect submit onclick', () => {
+        const fakeEvent = { preventDefault: () => console.log('preventDefault') };
+        wrapper.find('form').simulate('submit',  fakeEvent );
+        expect(mockemailSignInStart).toBeCalled();
+    });  
 });
