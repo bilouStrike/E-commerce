@@ -1,12 +1,16 @@
 # E-commerce
-FrontEnd part of E-commerce using React/Redux/Redux-saga
+Front End applicqtion using React/Redux/Redux-saga
 
-Run the frond end part:
+### Installation :
 
-### `npm start  --prefix ./client`
+`npm install`
 
-Run the test in client directory:
+### Run :
 
- ### `npm test`
+`npm start  --prefix ./client`
+
+### Testing:
+
+`npm test`
  
 
